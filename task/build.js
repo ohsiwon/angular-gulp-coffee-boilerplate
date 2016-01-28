@@ -15,7 +15,7 @@ module.exports = function (gulp, plugins, config) {
 
   gulp.task('build-js', function () {
    return gulp.src(config.paths.coffee)
-      .pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
+      .pipe(plugins.coffee({bare: false}).on('error', plugins.util.log))
       .pipe(plugins.ngAnnotate())
       .pipe(gulp.dest(config.paths.js))
   });
