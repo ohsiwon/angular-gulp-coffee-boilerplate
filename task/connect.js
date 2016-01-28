@@ -7,6 +7,7 @@ module.exports = function (gulp, plugins, config) {
         root: config.paths.src,
         port: 3000,
         livereload: true,
+        fallback: config.paths.src + '/index.html',
         middleware: function(connect, opt) {
           var connection = [], key;
           for (key in config.paths.tempDirs) {
