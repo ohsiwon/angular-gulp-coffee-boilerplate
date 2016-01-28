@@ -6,15 +6,15 @@ config      = [];
 
 // Path settings
 config.paths = {
-  'html'  : './src/**/*.html',
-  'sass'  : './src/scss/**/*.scss',
-  'coffee': './src/script/**/*.coffee',  
-  'css'   : './.tmp/style',
-  'js'    : './.tmp/script',
-  'src'   : './src',
-  'dist'  : './dist',
-  'tmp'   : './.tmp',
-  'asset' : './src/**/*.{html,jpg,jpeg,png,gif,svg}',
+  'html'  : 'src/**/*.html',
+  'sass'  : 'src/scss/**/*.scss',
+  'coffee': 'src/script/**/*.coffee',  
+  'css'   : '.tmp/style',
+  'js'    : '.tmp/script',
+  'src'   : 'src',
+  'dist'  : 'dist',
+  'tmp'   : '.tmp',
+  'asset' : 'src/**/*.{html,jpg,jpeg,png,gif,svg}',
   tempDirs: {
     '/style'    : './.tmp/style',
     '/script' : './.tmp/script',
