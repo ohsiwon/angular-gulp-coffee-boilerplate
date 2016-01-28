@@ -1,0 +1,2 @@
+'strict'
+angular.module('myApp', [])

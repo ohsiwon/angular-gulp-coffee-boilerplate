@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Just another Gulp + Angular + Coffee boilerplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:vendorCss css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:appCss(.tmp) css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="myApp" ng-strict-di>
+    <div ng-controller="myController">
+      <h2>{{greet}}</h2>
+    </div>
+    <!-- build:vendorJs script/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:appJs(.tmp) script/app.min.js -->
+    <script type="text/javascript" src="script/app.js"></script>
+    <script type="text/javascript" src="script/controllers/controller.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
