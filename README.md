@@ -1,4 +1,4 @@
-# Yet another Angular 1.x + CoffeeScript + Gulp Boilderplate
+# Yet another Angular 1.x + CoffeeScript + Gulp Boilerplate
 
 Howdy! this is just an another Boilerplate with Angular and CoffeScript. 
 
