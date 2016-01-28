@@ -1,0 +1,18 @@
+<h2>{{vm.greet}}</h2>
+<form name="greetForm" ng-submit="vm.hello()">
+  <input type="text" ng-model="vm.name" placeholder="Enter your name" required>
+  <button type="submit" ng-disabled="!greetForm.$valid">hello</button>
+  <input type="checkbox" ng-model="vm.alert"><label>Show alert after saved</label></input>
+</form>
+<br>
+
+<lable>Hello list:</lable>
+<hr>
+<ul>
+  <li ng-repeat="name in vm.loggedName track by $index">
+    {{name}} <button ng-click="vm.remove($index)">remove</button>
+  </li>
+</ul>
+<hr>
+<br>
+<a href='#/sample'>Move to another page</a>
