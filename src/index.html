@@ -15,17 +15,19 @@
     <!-- endbuild -->
   </head>
   <body ng-app="myApp" ng-strict-di>
-    <div ng-controller="myController">
-      <h2>{{greet}}</h2>
-    </div>
+    <div ng-view></div>
     <!-- build:vendorJs script/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:appJs(.tmp) script/app.min.js -->
     <script type="text/javascript" src="script/app.js"></script>
-    <script type="text/javascript" src="script/controllers/controller.js"></script>
+    <script type="text/javascript" src="script/controllers/homeController.js"></script>
+    <script type="text/javascript" src="script/controllers/anotherController.js"></script>
+    <script type="text/javascript" src="script/services/logService.js"></script>
+    <script type="text/javascript" src="script/directives/myDirective.js"></script>
     <!-- endbuild -->
   </body>
 </html>
