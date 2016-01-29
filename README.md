@@ -4,11 +4,9 @@ Howdy! this is just an another Boilerplate with Angular and CoffeScript.
 
 Nothing special, but it does the job.
 
-
 Enjoy!
 
 (Note: This Boilerplate doesn't come with any unit testing task runner.)
-
 
 ### You'll need:
 - node.js (https://nodejs.org)
@@ -16,6 +14,14 @@ Enjoy!
 - Bower (http://bower.io)
 - gulp (http://gulpjs.com)
 - CoffeeScript (http://coffeescript.org)
+- Sass (http://sass-lang.com/)
+
+### Useful features:
+- Simple local web server using gulp
+- Livereload
+- Live style injection 
+- Wire Bower dependencies
+- Code minification on build
 
 ### How to use
 1. Clone or download this repo
