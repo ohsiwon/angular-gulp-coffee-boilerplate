@@ -1,0 +1,49 @@
+
+/**
+ * Media query helper Mixin for Sass
+ * Author: Sean Oh
+ * Media query reference credit: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ 
+ */
+
+$primary-map: (
+  'small'  : ( min-width:  800px ),
+  'medium' : ( min-width: 1200px ),
+  'large'  : ( min-width: 1600px ),
+  'iphone4' : ('only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)'),
+  'iphone5' : ('only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)'),
+  'iphone6' : ('only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)'),
+  'iphone6+' : ('only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)'),
+  'ipad-mini': ('only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1)'),
+  'ipad-sd'  : ('only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)'),
+  'ipad-hd'  : ('only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)')
+  );
+ 
+$optional-map: (
+  'portrait'  : ( 'and (orientation: portrait)' ),
+  'landscape'  : ( 'and (orientation: landscape)' ),
+  );
+
+@mixin when($value, $opt:"") {
+  @if type_of($value) == number {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+  @else {    
+    @if map-has-key($primary-map, $value) {
+      @if map-has-key($optional-map, $opt) {
+        @media #{inspect(map-get($primary-map, $value)) inspect(map-get($optional-map, $opt))} {      
+          @content;
+        }
+      }
+      @else {
+        @media #{inspect(map-get($primary-map, $value))} {      
+          @content;
+        }
+      }
+    }
+    @else {
+      @warn "CSS error: no pre-defined value could be retrieved from #{$value}. "
+    }
+  }
+}

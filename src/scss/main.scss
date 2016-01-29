@@ -1,6 +1,22 @@
+@import 'mixins/media-query-helper';
+
 html{
-  background: #FFF;
 }
 body {
-  padding: 0 10px;
+
+  padding: 10px;
+  font-size: 1em;
+
+  @include when(medium) {
+    font-size: 1.2em;
+  }
+
+  @include when(large) {
+    font-size: 1.5em;
+  }
+
+  @include when(ipad-hd) {
+    background: #FFC;
+  }
+
 }
